@@ -1,0 +1,170 @@
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f2f6f3;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: #64b734;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #333;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+
+.admin-wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.admin-sidebar {
+  width: 220px;
+  background-color: #eaf8ea;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.admin-sidebar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 8px 10px;
+  border-radius: 5px;
+  transition: background 0.2s;
+}
+
+.admin-sidebar a:hover,
+.admin-sidebar a.active {
+  background-color: #64b734;
+  color: white;
+}
+.admin-content {
+  flex: 1;
+  padding: 30px;
+}
+.admin-main {
+  flex-grow: 1;
+  padding: 30px;
+  background-color: #f2f6f3;
+  box-sizing: border-box;
+}
+
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.card-header {
+  background-color: #64b734;
+  color: white;
+  padding: 15px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.card-header.active {
+  background-color: #519d2c;
+}
+
+.card-body {
+  display: none;
+  padding: 20px;
+}
+
+.card-body.show {
+  display: block;
+}
+
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input, select, button {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+button {
+  background: #64b734;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #519d2c;
+}
+
+.red-btn {
+  background-color: #d03e3e;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  margin-left: 10px;
+}
+
+.red-btn:hover {
+  background-color: #b53232;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  background: #eaf8ea;
+  margin: 8px 0;
+  padding: 10px;
+  border-left: 5px solid #64b734;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.logout-btn,
+#logoutBtn {
+  margin-top: auto;
+  width: 100%;
+  padding: 12px;
+  font-weight: bold;
+  border-radius: 10px;
+  background-color: #d03e3e;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+.logout-btn:hover,
+#logoutBtn:hover {
+  background-color: #b53232;
+}

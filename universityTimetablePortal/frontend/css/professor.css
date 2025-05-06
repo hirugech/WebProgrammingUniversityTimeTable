@@ -1,0 +1,68 @@
+.professor-wrapper {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 0;
+  }
+  
+  .professor-container {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  h1, h2 {
+    color: #64b734;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .controls {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  select {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .timetable-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .timetable-list li {
+    background-color: #e6f4e6;
+    border-left: 5px solid #64b734;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 6px;
+  }
+  
+  .logout-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #64b734;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 30px;
+  }
+  
+  .logout-button:hover {
+    background-color: #4ea42a;
+  }
+  

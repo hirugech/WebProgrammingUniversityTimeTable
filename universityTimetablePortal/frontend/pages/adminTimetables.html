@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin - Timetable Management</title>
+  <link rel="stylesheet" href="../css/admin.css" />
+</head>
+<body>
+  <div class="admin-wrapper">
+  
+    <nav class="admin-sidebar">
+      <h2>Admin Panel</h2>
+      <a href="adminCourses.html">Courses</a>
+      <a href="adminSubjects.html">Subjects</a>
+      <a href="adminRooms.html">Rooms</a>
+      <a href="adminTimetables.html" class="active">Timetables</a>
+      <a href="adminUsers.html"> Users</a>
+
+      <button id="logoutBtn" class="logout-btn">Logout</button>
+    </nav>
+
+    <main class="admin-content">
+      <h1>Timetable Management</h1>
+
+     
+      <div class="card">
+        <div class="card-header" onclick="toggleCard(this)">Add Timetable Entry</div>
+        <div class="card-body">
+          <form id="addTimetableForm">
+            <select name="subjectId" id="subjectSelect" required>
+              <option value="">-- Select Subject --</option>
+            </select>
+
+            <select name="professorId" id="professorSelect" required>
+              <option value="">-- Select Professor --</option>
+            </select>
+
+            <select name="roomId" id="roomSelect" required>
+              <option value="">-- Select Room --</option>
+            </select>
+
+            <select name="dayOfWeek" required>
+              <option value="">-- Select Day --</option>
+              <option>Monday</option>
+              <option>Tuesday</option>
+              <option>Wednesday</option>
+              <option>Thursday</option>
+              <option>Friday</option>
+              <option>Saturday</option>
+            </select>
+
+            <input type="time" name="startTime" required />
+            <input type="time" name="endTime" required />
+            <button type="submit">Add Entry</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header" onclick="toggleCard(this)">Timetable List</div>
+        <div class="card-body">
+          <label for="filterDay">Filter by Day:</label>
+          <select id="filterDay">
+            <option value=""> All Days </option>
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thursday">Thursday</option>
+            <option value="Friday">Friday</option>
+            <option value="Saturday">Saturday</option>
+          </select>
+
+          <ul id="timetableList"></ul>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../js/adminTimetable.js"></script>
+  <script>
+    function toggleCard(header) {
+      header.classList.toggle("active");
+      const body = header.nextElementSibling;
+      body.style.display = body.style.display === "block" ? "none" : "block";
+    }
+
+    document.getElementById("logoutBtn").addEventListener("click", () => {
+      localStorage.clear();
+      window.location.href = "../pages/login.html";
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title> Room Management</title>
+  <link rel="stylesheet" href="../css/admin.css" />
+</head>
+<body>
+  <div class="admin-layout">
+    
+  
+    <aside class="admin-sidebar">
+      <h2>Admin Panel</h2>
+     
+      <a href="adminCourses.html"> Courses</a>
+      <a href="adminSubjects.html">Subjects</a>
+      <a href="adminRooms.html" class="active">Rooms</a>
+      <a href="adminTimetables.html">Timetables</a>
+      <a href="adminUsers.html">Users</a>
+
+      <button id="logoutBtn" class="logout-btn">Logout</button>
+    </aside>
+
+    <main class="admin-main">
+      <h1>Room Management</h1>
+
+      <div class="card">
+        <div class="card-header" onclick="toggleCard(this)"> Add Room</div>
+        <div class="card-body">
+          <form id="addRoomForm">
+            <input type="text" name="roomName" placeholder="Room Name" required />
+            <button type="submit">Add Room</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header" onclick="toggleCard(this)"> Room List</div>
+        <div class="card-body">
+          <ul id="roomList"></ul>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../js/adminRooms.js"></script>
+  <script>
+    function toggleCard(header) {
+      header.classList.toggle("active");
+      const body = header.nextElementSibling;
+      body.style.display = body.style.display === "block" ? "none" : "block";
+    }
+
+    document.getElementById("logoutBtn").addEventListener("click", () => {
+      localStorage.clear();
+      window.location.href = "../pages/login.html";
+    });
+  </script>
+</body>
+</html>

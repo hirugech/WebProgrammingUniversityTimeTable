@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Professor Dashboard</title>
+  <link rel="stylesheet" href="../css/professor.css" />
+</head>
+<body>
+  <div class="professor-wrapper">
+    <div class="professor-container">
+      <h1> Professor Dashboard</h1>
+
+      <div class="controls">
+        <label for="filterDay">Filter by Day:</label>
+        <select id="filterDay">
+          <option value="">All Days </option>
+          <option value="Monday">Monday</option>
+          <option value="Tuesday">Tuesday</option>
+          <option value="Wednesday">Wednesday</option>
+          <option value="Thursday">Thursday</option>
+          <option value="Friday">Friday</option>
+        </select>
+      </div>
+
+      <h2>My Timetable</h2>
+      <ul id="professorTimetable" class="timetable-list"></ul>
+
+      <button id="logoutBtn" class="logout-button">Logout</button>
+    </div>
+  </div>
+
+  <script src="../js/professor.js"></script>
+</body>
+</html>
