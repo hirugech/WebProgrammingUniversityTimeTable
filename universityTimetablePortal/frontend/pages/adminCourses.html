@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Course Management</title>
+  <link rel="stylesheet" href="../css/course.css?v=1.1" />
+</head>
+<body>
+  <div class="admin-layout"> 
+  
+    <aside class="admin-sidebar">
+      <h2>Admin Panel</h2>
+      <a href="adminCourses.html" class="active">Courses</a>
+      <a href="adminSubjects.html">Subjects</a>
+      <a href="adminRooms.html">Rooms</a>
+      <a href="adminTimetables.html">Timetables</a>
+      <a href="adminUsers.html">Users</a>
+      <button id="logoutBtn" class="logout-btn">Logout</button>
+    </aside>
+
+  
+    <main class="admin-main">
+      <h1>Course Management</h1>
+
+      <div class="card-container">
+
+  
+        <div class="card">
+          <div class="card-header">Add Course</div>
+          <div class="card-body">
+            <form id="addCourseForm">
+              <input type="text" name="courseName" placeholder="Course Name" required />
+              <input type="number" name="semester" placeholder="Semester" required />
+              <input type="text" name="year" placeholder="Academic Year (e.g. 2025)" required />
+              <button type="submit">Add Course</button>
+            </form>
+          </div>
+        </div>
+
+  
+        <div class="card" id="updateCourseSection" style="display: none;">
+          <div class="card-header">Update Course</div>
+          <div class="card-body">
+            <form id="updateCourseForm">
+              <input type="hidden" name="courseId" id="updateCourseId" />
+              <input type="text" name="courseName" id="updateCourseName" required />
+              <input type="number" name="semester" id="updateSemester" required />
+              <input type="text" name="year" id="updateYear" required />
+              <button type="submit">Update Course</button>
+            </form>
+          </div>
+        </div>
+
+      
+        <div class="card">
+          <div class="card-header">Course List</div>
+          <div class="card-body">
+            <ul id="courseList"></ul>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <script src="../js/adminCourses.js?v=1.1"></script>
+  <script>
+    document.getElementById("logoutBtn").addEventListener("click", () => {
+      localStorage.clear();
+      window.location.href = "../pages/login.html";
+    });
+  </script>
+</body>
+</html>

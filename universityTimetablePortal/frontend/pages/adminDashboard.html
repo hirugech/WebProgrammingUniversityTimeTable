@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="../css/admin.css?v=2.0" />
+</head>
+<body>
+  <div class="admin-wrapper">
+    <nav class="admin-sidebar">
+      <h2>Admin Panel</h2>
+      <a href="adminDashboard.html" class="active">Dashboard</a>
+      <a href="adminCourses.html">Courses</a>
+      <a href="adminSubjects.html">Subjects</a>
+      <a href="adminRooms.html">Rooms</a>
+      <a href="adminTimetables.html">Timetables</a>
+      <a href="adminUsers.html">Users</a>
+      <button id="logoutBtn" class="logout-btn">Logout</button>
+    </nav>
+
+    <main class="admin-content">
+      <h1>Welcome Admin</h1>
+
+      <div class="card">
+        <div class="card-body show">
+          <p><strong>Name:</strong> <span id="adminName">Unknown</span></p>
+          <p><strong>Email:</strong> <span id="adminEmail">Unknown</span></p>
+          <p>Select a section from the sidebar to begin managing the system.</p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+
+  <script src="../js/adminDashboard.js?v=1.0"></script>
+</body>
+</html>

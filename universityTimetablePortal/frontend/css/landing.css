@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f2f6f3;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.landing-container {
+  background: #ffffff;
+  padding: 50px 40px;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+}
+
+.landing-header h1 {
+  font-size: 2rem;
+  color: #173506;
+  margin-bottom: 30px;
+  font-weight: bold;
+  line-height: 1.3;
+}
+
+.landing-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.btn {
+  padding: 12px 18px;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 6px;
+  background-color: #173506;
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+  background-color: #2a5c0e;
+  transform: scale(1.03);
+}
+
+.btn-secondary {
+  background-color: #444;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #222;
+  transform: scale(1.03);
+}
+
+.landing-footer {
+  margin-top: 35px;
+  font-size: 0.85rem;
+  color: #888;
+}

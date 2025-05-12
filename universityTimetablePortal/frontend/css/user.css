@@ -1,0 +1,188 @@
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f2f6f3;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: #173506;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #333;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+.admin-wrapper,
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+
+.admin-sidebar {
+  width: 220px;
+  background-color: #e8ede7;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.admin-sidebar a {
+  text-decoration: none;
+  color: #173506;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 10px 12px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.admin-sidebar a:hover,
+.admin-sidebar a.active {
+  background-color: #194102;
+  color: white;
+}
+
+
+.admin-content {
+  flex: 1;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+
+.card {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+}
+
+.card-header {
+  background-color: #173506;
+  color: white;
+  padding: 15px 20px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.card-header.active {
+  background-color: #1c4302;
+}
+
+.card-body {
+  padding: 20px;
+  display: block;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input,
+select,
+button {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+button {
+  background: #64b734;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #519d2c;
+}
+
+
+#userList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.user-role-group {
+  flex: 1 1 calc(50% - 20px); 
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  min-width: 300px;
+}
+
+.user-role-group h3 {
+  color: #173506;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+
+
+.user-role-group ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.user-role-group li {
+  background: #eaf8ea;
+  margin: 10px 0;
+  padding: 10px;
+  border-left: 5px solid #64b734;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.red-btn {
+  background-color: #d03e3e;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.red-btn:hover {
+  background-color: #b53232;
+}
+
+.logout-btn,
+#logoutBtn {
+  margin-top: auto;
+  width: 100%;
+  padding: 12px;
+  font-weight: bold;
+  border-radius: 10px;
+  background-color: #d03e3e;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.logout-btn:hover,
+#logoutBtn:hover {
+  background-color: #b53232;
+}

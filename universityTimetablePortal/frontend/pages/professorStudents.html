@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Students</title>
+  <link rel="stylesheet" href="../css/professor.css?v=1.2" />
+</head>
+<body>
+  <div class="admin-wrapper">
+    <aside class="admin-sidebar">
+      <h2>Professor Panel</h2>
+      <a href="professorDashboard.html">Timetable</a>
+      <a href="professorStudents.html" class="active">My Students</a>
+      <button id="logoutBtn" class="logout-btn">Logout</button>
+    </aside>
+
+    <main class="admin-content">
+      <h1>Students Taking My Subjects</h1>
+      <div id="studentsContainer" class="student-grid"></div>
+    </main>
+  </div>
+
+  <script src="../js/professorStudents.js?v=1.2"></script>
+</body>
+</html>

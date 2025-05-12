@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Professor Dashboard</title>
+  <link rel="stylesheet" href="../css/professor.css?v=1.2" />
+</head>
+<body>
+  <div class="admin-wrapper">
+    <aside class="admin-sidebar">
+      <h2>Professor Panel</h2>
+      <a href="professorDashboard.html" class="active">Timetable</a>
+      <a href="professorStudents.html">My Students</a>
+      <button id="logoutBtn" class="logout-btn">Logout</button>
+    </aside>
+
+    <main class="admin-content">
+      <h1>Welcome, <span id="professorName">Professor</span></h1>
+      <p class="professor-email"><strong>Email:</strong> <span id="professorEmail">-</span></p>
+
+      <div class="filter-container">
+        <label for="filterDay">Filter by Day:</label>
+        <select id="filterDay">
+          <option value="">All Days</option>
+          <option>Monday</option>
+          <option>Tuesday</option>
+          <option>Wednesday</option>
+          <option>Thursday</option>
+          <option>Friday</option>
+        </select>
+      </div>
+
+      <table class="timetable-table">
+        <thead>
+          <tr>
+            <th>Subject</th>
+            <th>Room</th>
+            <th>Day</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+          </tr>
+        </thead>
+        <tbody id="professorTimetable">
+          <tr><td colspan="5">Loading...</td></tr>
+        </tbody>
+      </table>
+    </main>
+  </div>
+
+  <script src="../js/professor.js?v=1.2"></script>
+</body>
+</html>
